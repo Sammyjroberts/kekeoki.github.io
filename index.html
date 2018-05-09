@@ -2,11 +2,50 @@
 <html>
 
     <head>
-        <link type="text/css" rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>When will I get my next BJJ belt?</h1>
+                <p>Fill out the form below to find out!</p>
+            </div>
+        </div>
+        <div class="container" id="guess-container">
+
+            <div class="row justify-content-between">
+                <div class="col-xs-4">
+                    <label>Current Belt</label>
+                    <select class = "form-control" id="curr-belt">
+                        <option>White</option>
+                        <option>Blue</option>
+                        <option>Purple</option>
+                        <option>Brown</option>
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    <p>Your next belt will be: </p>
+                    <p class ="font-italic font-weight-bold text-center" id = "new-belt">Blue</p>
+
+                </div>
+                <div class="col-xs-4">
+                    <button class = "btn btn-primary" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="load-container" style = "display: none">
+            <h1 class = "text-center"><i class="fas fa-spinner fa-spin"></i> Calculating approximate skill level. Calculations done via <strong>u/millsapp</strong> reddit bjj database</h1>
+        </div>
+        <div class="container" id="results-container" style = "display: none">
+            <div class="jumbotron">
+                <h1>It will take you approximately:</h1>
+                <p>As long as it takes</p>
+            </div>
+        </div>
         <script src = "./assets/js/main.js"></script>
     </body>
 </html>
